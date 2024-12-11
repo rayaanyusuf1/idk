@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baking Recipe Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Baking Recipe Generator</h1>
+        <p>Let's find the perfect recipe for you!</p>
+
+        <form id="recipe-form">
+            <div class="question">
+                <label for="flavor">What is your favorite flavor?</label>
+                <select id="flavor">
+                    <option value="chocolate">Chocolate</option>
+                    <option value="vanilla">Vanilla</option>
+                    <option value="fruity">Fruity</option>
+                    <option value="no-preference">No preference</option>
+                </select>
+            </div>
+
+            <div class="question">
+                <label for="diet">Do you have any dietary restrictions?</label>
+                <select id="diet">
+                    <option value="none">None</option>
+                    <option value="vegetarian">Vegetarian</option>
+                    <option value="gluten-free">Gluten-Free</option>
+                    <option value="vegan">Vegan</option>
+                </select>
+            </div>
+
+            <div class="question">
+                <label for="allergy">Do you have any allergies?</label>
+                <select id="allergy">
+                    <option value="none">None</option>
+                    <option value="nuts">Nuts</option>
+                    <option value="dairy">Dairy</option>
+                    <option value="eggs">Eggs</option>
+                </select>
+            </div>
+
+            <div class="question">
+                <label for="time">How much time do you want to spend baking?</label>
+                <select id="time">
+                    <option value="less-than-30">Less than 30 minutes</option>
+                    <option value="30-60">30-60 minutes</option>
+                    <option value="more-than-60">More than 60 minutes</option>
+                    <option value="no-preference">No preference</option>
+                </select>
+            </div>
+
+            <div class="question">
+                <label for="experience">What type of baking experience are you looking for?</label>
+                <select id="experience">
+                    <option value="classic">A classic family recipe</option>
+                    <option value="trendy">A trendy dessert</option>
+                    <option value="easy">Something easy for beginners</option>
+                    <option value="challenge">A challenge for advanced bakers</option>
+                    <option value="no-preference">No preference</option>
+                </select>
+            </div>
+
+            <button type="button" onclick="generateRecipe()">Generate Recipe</button>
+        </form>
+
+        <div id="recipe-output">
+            <h3>Suggested Recipe:</h3>
+            <p id="recipe"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
